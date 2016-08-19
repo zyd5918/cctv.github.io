@@ -13,7 +13,8 @@
 #section_seven p {
 	font-family: "å¾®è½¯é›…é»‘";
 	font-size: 17px;
-	color: #fff;
+	font-weight: 700;
+	color:#2D0475;
 	width: 900px;
 	text-align: center;
 	margin: 0 auto
@@ -33,7 +34,7 @@
 	line-height: 20px;
 	font-family: "å¾®è½¯é›…é»‘";
 	font-size: 10px;
-	color: #fff;
+	color: #2D0475;
 	width: 900px;
 	text-align: center;
 	margin: 0 auto
