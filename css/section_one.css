@@ -25,6 +25,7 @@ body {
  .nav >li>a  {
  	margin-left: 35px;
 	text-align: center;
+	color: #0AA770;
 }
 #section_one .top nav ul .text {
 	box-sizing: border-box;
