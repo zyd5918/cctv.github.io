@@ -7,6 +7,7 @@
  *
  *  MIT License
  */
+
 /* Modified from https://github.com/CaffeinaLab/SiriWaveJS */
 
 (function() {
@@ -155,6 +156,13 @@ if (typeof define === 'function' && define.amd) {
 window.SiriWave = SiriWave;
 
 })();
+
+
+
+
+
+
+
 // Cache references to DOM elements.
 var elms = ['track', 'timer', 'duration', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'playlistBtn', 'volumeBtn', 'progress', 'bar', 'wave', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
 elms.forEach(function(elm) {
@@ -202,7 +210,7 @@ Player.prototype = {
       sound = data.howl;
     } else {
       sound = data.howl = new Howl({
-        src: ['./audio/' + data.file + '.mp3'],
+        src: ['./audio/' + data.file + '.mp3', './audio/' + data.file + '.mp3'],
         html5: true, // Force to HTML5 so that the audio can stream in (best for large files).
         onplay: function() {
           // Display the duration.
@@ -335,9 +343,9 @@ Player.prototype = {
     sound.volume(val);
 
     // Update the display on the slider.
-    var barWidth = (val * 90) / 100;
-    barFull.style.width = (barWidth * 100) + '%';
-    sliderBtn.style.left = (window.innerWidth * barWidth + window.innerWidth * 0.05 - 800) + 'px';
+    var barWidth = (val * 70) / 100;
+    barFull.style.width = (barWidth * 92) + '%';
+    sliderBtn.style.left = (window.innerWidth * barWidth + window.innerWidth * 0.05 - 95) + 'px';
   },
 
   /**
@@ -368,7 +376,7 @@ Player.prototype = {
     // Determine our current seek position.
     var seek = sound.seek() || 0;
     timer.innerHTML = self.formatTime(Math.round(seek));
-    progress.style.width = (((seek / sound.duration()) * 100) || 0) + '%';
+    progress.style.width = (((seek / sound.duration()) * 10) || 0) + '%';
 
     // If the sound is still playing, continue stepping.
     if (sound.playing()) {
@@ -455,7 +463,8 @@ playlistBtn.addEventListener('click', function() {
 });
 playlist.addEventListener('click', function() {
   player.togglePlaylist();
-});volumeBtn.addEventListener('click', function() {
+});
+volumeBtn.addEventListener('click', function() {
   player.toggleVolume();
 });
 volume.addEventListener('click', function() {
@@ -525,7 +534,7 @@ var resize = function() {
   if (sound) {
     var vol = sound.volume();
     var barWidth = (vol * 0.9);
-    sliderBtn.style.left = (window.innerWidth * barWidth + window.innerWidth * 0.05 - 15) + 'px';
+    sliderBtn.style.left = (window.innerWidth * barWidth + window.innerWidth * 0.05 - 25) + 'px';
   }
 };
 window.addEventListener('resize', resize);
