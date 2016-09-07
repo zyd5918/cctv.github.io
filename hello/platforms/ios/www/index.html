@@ -1,0 +1,899 @@
+													<!DOCTYPE html>
+													<html>
+													<head>
+													<meta charset="utf-8">
+													<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+													<meta name="apple-mobile-web-app-capable" content="yes">
+													<meta name="apple-mobile-web-app-status-bar-style" content="black">
+													<title>My App</title>
+													<!-- Path to Framework7 Library CSS-->
+													<link rel="stylesheet" href="css/css/framework7.ios.min.css">
+													<!-- Path to your custom app styles-->
+													<link rel="stylesheet" href="css/my-app.css">
+													
+													<style type="text/css"> 
+													.checkbox{
+													right:-120px;
+													}
+													.color{
+														color: bule;
+													}
+													
+													</style>
+													</head>
+													<body>
+													<!-- Status bar overlay for fullscreen mode-->
+													<div class="statusbar-overlay"></div>
+													<!-- Panels overlay-->
+													<div class="panel-overlay"></div>
+													<!-- Left panel with reveal effect-->
+													<div class="panel panel-left panel-reveal">
+													<div class="content-block">
+													<form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+													<div class="searchbar-input">
+													<input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a>
+													</div><a href="#" class="color  searchbar-cancel">Cancel</a>
+													</form>
+													</div>
+													</div>
+													<!-- Right panel with cover effect-->
+													
+													<!-- Views-->
+													<div class="views">
+													<!-- Your main view, should have "view-main" class-->
+													<div class="view view-main">
+													<!-- Top Navbar-->
+													<div class="navbar">
+													<!-- Navbar inner for Index page-->
+													<div data-page="index" class="navbar-inner">
+													<!-- We have home navbar without left link-->
+													<div class="center sliding">设置</div>
+													<div class="right">
+													<!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+													</div>
+													</div>
+													<!-- Navbar inner for About page-->
+													<div data-page="about" class="navbar-inner cached">
+													<div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+													<div class="center sliding">无线局域网</div>
+													</div>
+													<!-- Navbar inner for Services page-->
+													<div data-page="services" class="navbar-inner cached">
+													<div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+													<div class="center sliding">网络选择</div>
+													</div>
+													<!-- Navbar inner for Form page-->
+													<div data-page="form" class="navbar-inner cached">
+													<div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+													<div class="center sliding">控制中心</div>
+													</div>
+													
+													
+													<div data-page="wurao" class="navbar-inner cached">
+													<div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+													<div class="center sliding">勿扰模式</div>
+													</div>
+													
+													
+													<div data-page="yunxulaidian" class="navbar-inner cached">
+													<div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+													<div class="center sliding">允许以下来电</div>
+													</div>
+													
+													<div data-page="tongyong" class="navbar-inner cached">
+													<div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+													<div class="center sliding">通用</div>
+													</div>
+													
+													<div data-page="xianshi" class="navbar-inner cached">
+													<div class="left sliding">
+													<a href="#" class="back link">
+													<i class="icon icon-back"></i>
+													<span>Back</span>
+													</a>
+													</div>
+													<div class="center sliding">显示与亮度</div>
+													</div>
+													
+													
+													<div data-page="Siri" class="navbar-inner cached">
+													<div class="left sliding">
+													<a href="#" class="back link">
+													<i class="icon icon-back"></i>
+													<span>Back</span>
+													</a>
+													</div>
+													<div class="center sliding">Siri</div>
+													</div>
+													</div>
+													<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+													<div class="pages navbar-through toolbar-through">
+													<!-- Index Page-->
+													<div data-page="index" class="page">
+													<!-- Scrollable page content-->
+													<div class="page-content">
+													
+													<div class="list-block">
+													<ul>
+													<li>
+													<div class="item-content">
+													<div class="item-media"><i class="icon icon-form"></i></div>
+													<div class="item-inner">
+													<div class="item-title label">飞行模式</div>
+													<div class="item-input">
+													<label class="label-switch">
+													<input type="checkbox">
+													<div class="checkbox"></div>
+													</label>
+													</div>
+													</div>
+													</div>
+													</li>
+													<li><a href="#about" class="item-link">
+													<div class="item-content"> 
+													<div class="item-media"><i class="icon icon-form2"></i></div>
+													<div class="item-inner">
+													<div class="item-title">无线局域网</div>
+													<div class="item-after">未连接</div>
+													</div>
+													</div></a></li>
+													<li><a href="#services" class="item-link">
+													<div class="item-content"> 
+													<div class="item-media"><i class="icon icon-form1"></i></div>
+													<div class="item-inner">
+													<div class="item-title">运营商</div>
+													<div class="item-after">中国移动</div>
+													</div>
+													</div></a></li>
+													</ul>
+													</div>
+													
+													
+													<div class="list-block">
+													<ul>
+													<li><a href="#form" class="item-link">
+													<div class="item-content">
+													<div class="item-media"><i class="icon icon-form3"></i></div>
+													<div class="item-inner"> 
+													<div class="item-title">控制中心</div>
+													</div>
+													</div></a></li>
+													<li><a href="#wurao" class="item-link">
+													<div class="item-content"> 
+													<div class="item-media"><i class="icon icon-form4"></i></div>
+													<div class="item-inner">
+													<div class="item-title">勿扰模式</div>
+													</div>
+													</div></a></li>
+													<li><a href="#tongyong" class="item-link">
+													<div class="item-content"> 
+													<div class="item-media"><i class="icon icon-form5"></i></div>
+													<div class="item-inner">
+													<div class="item-title">通用</div>
+													</div>
+													</div></a></li>
+													</ul>
+													</div>
+													
+													
+													<div class="list-block">
+													<ul>
+													<li><a href="#xianshi" class="item-link">
+													<div class="item-content">
+													<div class="item-media"><i class="icon icon-form6"></i></div>
+													<div class="item-inner"> 
+													<div class="item-title">显示与亮度</div>
+													</div>
+													</div></a></li>
+													<li><a href="#Siri" class="item-link">
+													<div class="item-content"> 
+													<div class="item-media"><i class="icon icon-form7"></i></div>
+													<div class="item-inner">
+													<div class="item-title">Siri</div>
+													</div>
+													</div></a></li>
+													
+													</ul>
+													</div>
+													</div>
+													</div>
+													
+													<!-- About Page-->
+													<div data-page="about" class="page cached">
+													<div class="page-content">
+													<div class="list-block">
+													<ul>
+													<li>
+													<div class="item-content">
+													
+													<div class="item-inner">
+													<div class="item-title label">无线局域网</div>
+													<div class="item-input">
+													<label class="label-switch">
+													<input type="checkbox">
+													<div class="checkbox"></div>
+													</label>
+													</div>
+													</div>
+													</div>
+													</li>  
+													</ul>
+													<div class="list-block-label">正在获取网络。。。</div>
+													
+													</div>
+													
+													<div class="list-block">
+													<ul>
+													<li><a href="#about" class="item-link">
+													<div class="item-content">
+													<div class="item-inner"> 
+													<div class="item-title">使用无线局域网与蜂窝数据的应用</div>
+													</div>
+													</div></a></li>
+													
+													
+													</ul>
+													</div>
+													
+													<div class="list-block">
+													<ul>
+													<li>
+													<div class="item-content">
+													
+													<div class="item-inner"> 
+													<div class="item-title label">启用WAPI</div>
+													<div class="item-input">
+													<label class="label-switch">
+													<input type="checkbox">
+													<div class="checkbox"></div>
+													</label>
+													</div>
+													</div>
+													</div></li>
+													
+													
+													</ul>
+													</div>
+													
+													<div class="list-block">
+													<ul>
+													<li>
+													<div class="item-content">
+													
+													<div class="item-inner"> 
+													<div class="item-title label">询问是否加入网络</div>
+													
+													<div class="item-input">
+													<label class="label-switch">
+													<input type="checkbox">
+													<div class="checkbox"></div>
+													</label>
+													</div>
+													</div>
+													</div></li>
+													
+													
+													</ul>
+													<div class="list-block-label">启动将自动加入网络，如没有以知网络必须手动加入！</div>
+													</div>
+													
+													</div>
+													</div>
+													<!-- Services Page-->
+													<div data-page="services" class="page cached">
+													<div class="page-content">
+													<div class="list-block">
+													<div class="list-block-label">运营商</div>
+													<ul>
+													<li>
+													<div class="item-content">
+													
+													<div class="item-inner">
+													<div class="item-title label">自动</div>
+													<div class="item-input">
+													<label class="label-switch">
+													<input type="checkbox">
+													<div class="checkbox"></div>
+													</label>
+													</div>
+													</div>
+													</div>
+													</li>
+													</ul>
+													</div>
+													</div>
+													</div>
+													<!-- Form Page-->
+													<div data-page="form" class="page cached">
+													<div class="page-content">
+													<div class="list-block">
+													<div class="list-block-label">从屏幕底部向上轻扫来显示“控制中心”</div>
+													<ul>
+													<li>
+													<div class="item-content">
+													
+													<div class="item-inner">
+													<div class="item-title label">在锁定屏幕上访问</div>
+													<div class="item-input">
+													<label class="label-switch">
+													<input type="checkbox">
+													<div class="checkbox"></div>
+													</label>
+													</div>
+													</div>
+													</div>
+													</li>
+													</ul>
+													<div class="list-block-label">允许在锁定的屏幕上访问“控制中心”</div>
+													</div>
+													
+													<div class="list-block">
+													<ul>
+													<li>
+													<div class="item-content">
+													
+													<div class="item-inner">
+													<div class="item-title label">应用内访问</div>
+													<div class="item-input">
+													<label class="label-switch">
+													<input type="checkbox">
+													<div class="checkbox"></div>
+													</label>
+													</div>
+													</div>
+													</div>
+													</li>
+													</ul>
+													<div class="list-block-label">允许在应用内访问“控制中心”。</div>
+													</div>
+													</div>
+													</div>
+													
+													
+													<div data-page="wurao" class="page cached">
+													<div class="page-content">
+													<div class="list-block">
+													<ul>
+													<li>
+													<div class="item-content">
+													<div class="item-inner">
+													<div class="item-title label">手动</div>
+													<div class="item-input">
+													<label class="label-switch">
+													<input type="checkbox">
+													<div class="checkbox"></div>
+													</label>
+													</div>
+													</div>
+													</div>
+													</li>
+													</ul>
+													<div class="list-block-label">“勿扰模式”启动后，屏幕锁定时的来电和提醒将被设为静音，而状态中
+													将出现月亮图标。</div>
+													</div>
+													
+													
+													<div class="list-block">
+													<ul>
+													<li>
+													<div class="item-content">
+													<div class="item-inner">
+													<div class="item-title label">设定时间</div>
+													<div class="item-input">
+													<label class="label-switch">
+													<input type="checkbox">
+													<div class="checkbox"></div>
+													</label>
+													</div>
+													</div>
+													</div>
+													</li>
+													</ul>
+													
+													</div>
+													
+													<div class="list-block">
+													<ul>
+													<li><a href="#yunxulaidian" class="item-link">
+													<div class="item-content">
+													<div class="item-inner"> 
+													<div class="item-title">允许以下来电</div>
+													<div class="item-after">个人收藏</div>
+													</div>
+													</div></a></li>
+													</ul>
+													<div class="list-block-label">您个人收藏中的联系人不会被设为静音。</div>
+													
+													</div>
+													
+													<div class="list-block">
+													<ul>
+													<li>
+													<div class="item-content">
+													
+													<div class="item-inner">
+													<div class="item-title label">重复来电</div>
+													<div class="item-input">
+													<label class="label-switch">
+													<input type="checkbox">
+													<div class="checkbox"></div>
+													</label>
+													</div>
+													</div>
+													</div>
+													</li>
+													</ul>
+													<div class="list-block-label">启用后，相同来电者在三分钟内的第二个来电不会被设为静音。</div>
+													</div>
+													
+													
+													<div class="list-block">
+													<div class="list-block-label">静音模式：</div>
+													<ul>
+													<!-- Single radio input -->
+													<li>
+													<label class="label-radio item-content">
+													<!-- Checked by default -->
+													<input type="radio" name="my-radio" value="Books" checked="checked">
+													<div class="item-inner">
+													<div class="item-title">始终</div>
+													</div>
+													</label>
+													</li>
+													<!-- Another radio input -->
+													<li>
+													<label class="label-radio item-content">
+													<input type="radio" name="my-radio" value="Movies">
+													<div class="item-inner">
+													<div class="item-title">仅当iPhone已锁定时</div>
+													</div>
+													</label>
+													</li>
+													
+													</ul>
+													<div class="list-block-label">
+													iPhone被锁定的时间段内，来电和新通知都会被设为静音。
+													</div>
+													</div>                       
+													</div>
+													</div>
+													
+													
+													<div data-page="yunxulaidian" class="page cached">
+													<div class="page-content">
+													<div class="list-block">
+													<ul>
+													<li>
+													<label class="label-radio item-content">
+													<!-- Checked by default -->
+													<input type="radio" name="my-radio" value="Books" checked="checked">
+													<div class="item-inner">
+													<div class="item-title">所有人</div>
+													</div>
+													</label>
+													</li>
+													<!-- Another radio input -->
+													<li>
+													<label class="label-radio item-content">
+													<input type="radio" name="my-radio" value="Movies">
+													<div class="item-inner">
+													<div class="item-title">均不允许</div>
+													</div>
+													</label>
+													
+													
+													</li>
+													
+													<li>
+													<label class="label-radio item-content">
+													<input type="radio" name="my-radio" value="Movies">
+													<div class="item-inner">
+													<div class="item-title">个人收藏</div>
+													</div>
+													</label>
+													
+													
+													</li>
+													</ul>
+													
+													</div>
+													<div class="list-block">
+													<div class="list-block-label">群组：</div>
+													<ul>
+													<!-- Single radio input -->
+													<li>
+													<label class="label-radio item-content">
+													<!-- Checked by default -->
+													<input type="radio" name="my-radio" value="Books" checked="checked">
+													<div class="item-inner">
+													<div class="item-title">所有联系人</div>
+													</div>
+													</label>
+													</li>
+													<!-- Another radio input -->
+													<li>
+													<label class="label-radio item-content">
+													<input type="radio" name="my-radio" value="Movies">
+													<div class="item-inner">
+													<div class="item-title">Coworkers</div>
+													</div>
+													</label>
+													</li>
+													
+													<li>
+													<label class="label-radio item-content">
+													<input type="radio" name="my-radio" value="Movies">
+													<div class="item-inner">
+													<div class="item-title">Family</div>
+													</div>
+													</label>
+													</li>
+													
+													<li>
+													<label class="label-radio item-content">
+													<input type="radio" name="my-radio" value="Movies">
+													<div class="item-inner">
+													<div class="item-title">Friends</div>
+													</div>
+													</label>
+													</li>
+													
+													<li>
+													<label class="label-radio item-content">
+													<input type="radio" name="my-radio" value="Movies">
+													<div class="item-inner">
+													<div class="item-title">My Contacts</div>
+													</div>
+													</label>
+													</li>
+													<li>
+													<label class="label-radio item-content">
+													<input type="radio" name="my-radio" value="Movies">
+													<div class="item-inner">
+													<div class="item-title">Starred in Android</div>
+													</div>
+													</label>
+													</li>
+													</ul>
+													
+													</div>   
+													</div>
+													</div>
+													
+													<div data-page="tongyong" class="page cached">
+													<!-- Scrollable page content-->
+													<div class="page-content">
+													
+													<div class="list-block">
+													<ul>
+													<li>
+													<div class="item-content">
+													
+													<div class="item-inner">
+													<div class="item-title label">关于本机</div>
+													
+													</div>
+													</div>
+													</li>
+													<li><a href="#" class="item-link">
+													<div class="item-content"> 
+													
+													<div class="item-inner">
+													<div class="item-title">软件更新</div>
+													
+													</div>
+													</div></a></li>
+													</ul>
+													</div>
+													
+													<div class="list-block">
+													<ul>
+													<li><a href="#" class="item-link">
+													<div class="item-content"> 
+													
+													<div class="item-inner">
+													<div class="item-title">Spotlight搜索</div>
+													
+													</div>
+													</div></a></li>
+													
+													
+													
+													
+													<li><a href="#" class="item-link">
+													<div class="item-content">
+													
+													<div class="item-inner"> 
+													<div class="item-title">Handoff与建议的应用</div>
+													</div>
+													</div></a></li>
+													<li><a href="#" class="item-link">
+													<div class="item-content"> 
+													
+													<div class="item-inner">
+													<div class="item-title">CarPlay</div>
+													</div>
+													</div></a></li>
+													</ul>
+													</div>
+													
+													<div class="list-block">
+													<ul>
+													<li><a href="#" class="item-link">
+													<div class="item-content"> 
+													
+													<div class="item-inner">
+													<div class="item-title">辅助功能</div>
+													</div>
+													</div></a></li>
+													</ul>
+													</div>
+													
+													
+													<div class="list-block">
+													<ul>
+													<li><a href="#" class="item-link">
+													<div class="item-content"> 
+													
+													<div class="item-inner">
+													<div class="item-title">储存空间与iCloud用量</div>
+													</div>
+													</div></a></li>
+													
+													<li><a href="#" class="item-link">
+													<div class="item-content"> 
+													
+													<div class="item-inner">
+													<div class="item-title">后台运用刷新</div>
+													</div>
+													</div></a></li>
+													</ul>
+													</div>
+													</div>
+													</div> 
+													
+													
+													
+													<div data-page="xianshi" class="page cached">
+													<!-- Scrollable page content-->
+													<div class="page-content">
+													
+													<div class="list-block">
+													<div class="list-block-label">
+													亮度
+													</div>
+													<ul>
+													<li>
+													<div class="item-content">
+													
+													<div class="item-inner">
+													<!-- <div class="item-title label">Slider</div> -->
+													<div class="item-input">
+													<div class="range-slider">
+													<input type="range" min="0" max="100" value="50" step="0.1">
+													</div>
+													</div>
+													</div>
+													</div>
+													</li>
+													<li>
+													<div class="item-content"> 
+													
+													<div class="item-inner">
+													<div class="item-title">自动调节</div>
+													
+													</div>
+													<div class="item-input">
+													<label class="label-switch">
+													<input type="checkbox">
+													<div class="checkbox"></div>
+													</label>
+													</div>
+													</div></li>
+													</ul>
+													</div>
+													
+													<div class="list-block">
+													<ul>
+													<li><a href="#" class="item-link">
+													<div class="item-content"> 
+													
+													<div class="item-inner">
+													<div class="item-title">Night shift</div>
+													<div class="item-after">关闭</div>
+													</div>
+													</div></a></li>
+													
+													</ul>
+													</div>
+													
+													<div class="list-block">
+													<ul>
+													<li><a href="#" class="item-link">
+													<div class="item-content"> 
+													
+													<div class="item-inner">
+													<div class="item-title">自动锁定</div>
+													</div>
+													</div></a></li>
+													</ul>
+													</div>
+													
+													
+													<div class="list-block">
+													<ul>
+													<li><a href="#" class="item-link">
+													<div class="item-content"> 
+													
+													<div class="item-inner">
+													<div class="item-title">文字大小</div>
+													</div>
+													</div></a></li>
+													
+													<li>
+													<div class="item-content"> 
+													
+													<div class="item-inner">
+													<div class="item-title">粗体文本</div>
+													
+													</div>
+													<div class="item-input">
+													<label class="label-switch">
+													<input type="checkbox">
+													<div class="checkbox"></div>
+													</label>
+													</div>
+													</div></li>
+													</ul>
+													</div>
+													
+													<div class="list-block">
+													<div class="list-block-label">放大显示</div>
+													<ul>
+													<li><a href="#" class="item-link">
+													<div class="item-content"> 
+													
+													<div class="item-inner">
+													<div class="item-title">视图</div>
+													</div>
+													</div></a></li>
+													</ul>
+													<div class="list-block-label">选取查看iPhone的方式。“放大”会显示更大的控制项。
+													“标准”会显示更多内容。
+													</div>
+													</div>
+													</div><div data-page="Siri" class="page cached">
+													<div class="page-content">
+													<div class="list-block">
+													
+													<ul>
+													<li>
+													<div class="item-content">
+													
+													<div class="item-inner">
+													<div class="item-title label">Siri</div>
+													<div class="item-input">
+													<label class="label-switch">
+													<input type="checkbox">
+													<div class="checkbox"></div>
+													</label>
+													</div>
+													</div>
+													</div>
+													</li>
+													</ul>
+													<div class="list-block-label">按住主屏幕按钮来开始与Siri说话，
+													说完后需释放按钮。
+													
+													</div>
+													</div>
+													
+													<div class="list-block">
+													
+													<ul>
+													<li>
+													<div class="item-content">
+													
+													<div class="item-inner">
+													<div class="item-title label">在锁定屏幕上访问</div>
+													<div class="item-input">
+													<label class="label-switch">
+													<input type="checkbox">
+													<div class="checkbox"></div>
+													</label>
+													</div>
+													</div>
+													</div>
+													</li>
+													</ul>
+													<div class="list-block-label">允许在锁定的屏幕上访问Siri.
+													
+													
+													</div>
+													</div>
+													
+													<div class="list-block">
+													
+													<ul>
+													<li>
+													<div class="item-content">
+													
+													<div class="item-inner">
+													<div class="item-title label">允许“嘿Siri”</div>
+													<div class="item-input">
+													<label class="label-switch">
+													<input type="checkbox">
+													<div class="checkbox"></div>
+													</label>
+													</div>
+													</div>
+													</div>
+													</li>
+													</ul>
+													<div class="list-block-label">
+													接上电源时无需按下主屏幕按钮，只要说“嘿Siri”
+													即可与Siri对话
+													
+													</div>
+													</div>
+													<div class="list-block">
+													<ul>
+													<li><a href="#" class="item-link">
+													<div class="item-content"> 
+													
+													<div class="item-inner">
+													<div class="item-title">语言</div>
+													</div>
+													</div></a></li>
+													
+													<li><a href="#" class="item-link">
+													<div class="item-content"> 
+													
+													<div class="item-inner">
+													<div class="item-title">Siri声音</div>
+													</div>
+													</div></a></li>
+													
+													
+													<li><a href="#" class="item-link">
+													<div class="item-content"> 
+													
+													<div class="item-inner">
+													<div class="item-title">语言反馈</div>
+													</div>
+													</div></a></li>
+													
+													<li><a href="#" class="item-link">
+													<div class="item-content"> 
+													
+													<div class="item-inner">
+													<div class="item-title">我的信息</div>
+													</div>
+													</div></a></li>
+													
+													<li><a href="#" class="item-link">
+													<div class="item-content"> 
+													
+													<div class="item-inner">
+													<div class="item-title">App支持</div>
+													</div>
+													</div></a></li>
+													</ul>
+													</div>
+													</div>
+													</div>
+													</div> 
+													
+													
+													</div>               
+													
+													
+													
+													
+													<!-- Path to Framework7 Library JS-->
+													<script type="text/javascript" src="js/js/framework7.min.js"></script>
+													<!-- Path to your app js-->
+													<script type="text/javascript" src="js/my-app.js"></script>
+													<!-- <script type="text/javascript" src="js/sousuo.js"></script> -->
+													</body>
+													</html>
